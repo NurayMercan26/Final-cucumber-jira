@@ -1,6 +1,7 @@
 package com.cydeo.seamless.pages;
 
 import com.cydeo.seamless.utilities.Driver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -36,6 +37,15 @@ public class SeamlessPage {
 
     @FindBy(xpath = "//*[@id=\"expanddiv\"]/ul/li[5]/a")
     public WebElement logout;
+
+
+    @FindBy(xpath = "//p[normalize-space(text())='Wrong username or password.']")
+    private WebElement errorMessageText;
+
+    @FindBy(xpath = "//p[@class='warning throttledMsg']")
+    private WebElement warningMessage;
+
+
 
     ////*[@id="expanddiv"]/ul/li[5]/a
 }

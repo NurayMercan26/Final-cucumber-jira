@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/seamless/step_definitions",
         dryRun =false,
-        tags = "@SEAMLES-2414"
+        tags = "@SEAMLES-2397"
         //  publish = true
 
 )

@@ -1,5 +1,6 @@
 package com.cydeo.seamless.step_definitions;
 
+import com.cydeo.seamless.pages.Login2InvalidPage;
 import com.cydeo.seamless.pages.SeamlessPage;
 import com.cydeo.seamless.utilities.BrowserUtils;
 import com.cydeo.seamless.utilities.ConfigurationReader;
@@ -12,6 +13,7 @@ import org.openqa.selenium.Keys;
 
 public class Login2Seamless_StepDefinitions {
     SeamlessPage seamlessPage = new SeamlessPage();
+   Login2InvalidPage login2InvalidPage = new Login2InvalidPage();
     @Given("user can on the login page")
     public void user_can_on_the_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("seamlessly.url"));
@@ -25,19 +27,9 @@ public class Login2Seamless_StepDefinitions {
         seamlessPage.inputPassword.sendKeys("Employee123", Keys.ENTER);
     }
     @Then("user should able see  {string}")
-    public void user_should_able_see(String string) {
-      seamlessPage.wrongUserNamePassword.sendKeys("Wrong usarname or password");
+    public void user_should_able_see(String messageText) {
 
-        BrowserUtils.waitForVisibilityOf(seamlessPage.wrongUserNamePassword);
-
-        String actualResult = seamlessPage.wrongUserNamePassword.getText();
-        String expectedResult = "Wrong usarname or password";
-        //System.out.println(actualResult);
-
-        Assert.assertEquals(expectedResult, actualResult);
-        System.out.println("librarian should be able see Wrong usarname or password");
-        seamlessPage.dropdownButton.click();
-        seamlessPage.logout.click();
+        login2InvalidPage.verifyErrorOrAlertMessage(messageText);
     }
 
 
@@ -62,13 +54,11 @@ public class Login2Seamless_StepDefinitions {
     }
 
 
-    @Then("user should able see  please fill out this field")
-    public void userShouldAbleSeePleaseFillOutThisField() {
-        System.out.println("please fill out this field");
-
-        seamlessPage.dropdownButton.click();
-        seamlessPage.logout.click();
+    @Then("User clicks {string} {string}")
+    public void user_clicks(String clickType,String messageText) {
+        login2InvalidPage.userClicksBtn(clickType,messageText);
     }
+
 
 
 }
