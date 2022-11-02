@@ -45,9 +45,10 @@ public class Login2InvalidPage {
         inputPassword.sendKeys(password);
     }
 
-    public void userClicksBtn(String clickType) {
+   public void userClicksBtn() {
 
-        if (clickType.equalsIgnoreCase("ENTER")) {
+      String clickType = null;
+    if (clickType.equalsIgnoreCase("ENTER")) {
             loginBtn.sendKeys(Keys.ENTER);
         } else if (clickType.equalsIgnoreCase("LoginBtn")) {
             loginBtn.click();

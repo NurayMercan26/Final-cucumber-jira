@@ -44,8 +44,16 @@ public class SeamlessPage {
 
     @FindBy(xpath = "//p[@class='warning throttledMsg']")
     private WebElement warningMessage;
+    @FindBy(xpath = "//img[@src='/core/img/actions/toggle.svg']")
+    public WebElement EyeButton;
 
+    @FindBy(id="lost-password")
+    public WebElement forgotPassword;
 
+    @FindBy(id="reset-password-submit")
+    public WebElement resetPassword;
 
+//id=lost-password //id=reset-password-submit
+//@/core/img/actions/toggle.svg/core/img/actions/toggle.svg
     ////*[@id="expanddiv"]/ul/li[5]/a
 }
