@@ -26,7 +26,7 @@ public class SeamlessPage {
     @FindBy(xpath = "//p[@class=\"warning wrongPasswordMsg\"]")
     public WebElement wrongUserNamePassword;
 
-    @FindBy(xpath = "//div[@class=\"logo\"]")
+    @FindBy(xpath = "//*[@id='body-login']/div[1]/div/main/div/div/a[2]")
     public WebElement LogoSeamlessly;
 
     @FindBy(xpath = "//button[@class='user-status-menu-item__toggle user-status-menu-item__toggle--inline']")
@@ -53,6 +53,15 @@ public class SeamlessPage {
     @FindBy(id="reset-password-submit")
     public WebElement resetPassword;
 
+    @FindBy(xpath = "//input[@required=\"required\"]")
+    public WebElement placeHolderName;
+
+    @FindBy(className="password-with-toggle")
+    public WebElement dotPassword;
+
+
+
+    ////input[@placeholder='Kullanıcı adı ya da e-posta']
 //id=lost-password //id=reset-password-submit
 //@/core/img/actions/toggle.svg/core/img/actions/toggle.svg
     ////*[@id="expanddiv"]/ul/li[5]/a

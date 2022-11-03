@@ -33,6 +33,8 @@ public class LogoutOutline_StepDefinitions {
     @Then("user should be able to see dashboard {string}")
     public void userShouldBeAbleToSeeDashboard(String string) {
         System.out.println("user should be able see  Wrong username or password.");
-        // login2InvalidPage.verifyErrorOrAlertMessage("Wrong username or password.");
+     //  BrowserUtils.waitFor(20);
+   // Assert.assertTrue(seamlessPage.wrongUserNamePassword.getAttribute("value").contains("Wrong username or password."));
+     //   Assert.assertTrue(seamlessPage.LogoSeamlessly.getText().contains("Bir aygıt ile oturum açın"));
     }
 }
