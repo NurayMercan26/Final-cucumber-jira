@@ -6,6 +6,7 @@ import com.cydeo.seamless.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class LoginForgotLink_StepDefinitions {
     SeamlessPage seamlessPage = new SeamlessPage();
@@ -26,6 +27,7 @@ public class LoginForgotLink_StepDefinitions {
 
     @Then("User can see username or email")
     public void user_can_see_username_or_email() {
+        Assert.assertTrue(seamlessPage.placeHolderName.getAttribute("aria-label").contains("Kullanıcı adı ya da e-posta"));
         System.out.println("User can see username or email");
     }
 

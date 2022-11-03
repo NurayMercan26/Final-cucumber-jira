@@ -31,7 +31,7 @@ public class Login2InvalidPage {
     private WebElement pageLogo;
 
     @FindBy(xpath = "//p[normalize-space(text())='Wrong username or password.']")
-    private WebElement errorMessageText;
+    public WebElement errorMessageText;
 
     @FindBy(xpath = "//p[@class='warning throttledMsg']")
     private WebElement warningMessage;

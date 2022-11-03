@@ -6,6 +6,7 @@ import com.cydeo.seamless.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class LoginEye_StepDefinitions {
     SeamlessPage seamlessPage = new SeamlessPage();
@@ -26,6 +27,7 @@ public class LoginEye_StepDefinitions {
     @Then("user can see the password explicitly if needed verify that password seen explicitly")
     public void user_can_see_the_password_explicitly_if_needed_verify_that_password_seen_explicitly() {
         System.out.println("User see can your password blabla");
+        Assert.assertTrue(seamlessPage.inputPassword.getAttribute("value").contains("blabla"));
     }
 
 }

@@ -40,8 +40,8 @@ public class LogoutSeamless_StepDefinitions {
 
     @Then("user can see seamlessy logo")
     public void user_can_see_seamlessy_logo() {
-
-        System.out.println("librarian should be able see seamlessy logo");
+        Assert.assertTrue(seamlessPage.LogoSeamlessly.getText().contains("Bir aygıt ile oturum açın"));
+        System.out.println("user should be able see seamlessy logo");
     }
 
 }

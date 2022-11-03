@@ -11,7 +11,7 @@ Feature:  Login feature
     And student enters password "<password>"
     Then  user should be able to see dashboard "<message error>"
 
-    Examples: Valid credentials for student user
+    Examples: invalid credentials for student user
 
       | username          | password | message error               |
       | employee100       | nGdNzH1e | Wrong username or password. |
